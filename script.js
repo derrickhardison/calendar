@@ -37,6 +37,7 @@ for(var i = 0; i < arrayOfHours.length; i++){
 
     var textField = $("<textarea>");
     textField.addClass("description col-10");
+    textField.data("hours", arrayOfHours[i]);
     row.append(textField);
 
     var buttonCol = $("<button>");
@@ -55,7 +56,7 @@ for(var i = 0; i < arrayOfHours.length; i++){
 
 function saveClick(e) {
     var textEvent = $(this.previousElementSibling).val();
-    var time = $(this.previousElementSibling).data("hours")
+    var time = $(this.previousElementSibling).data("hours");
 
     localStorage.setItem(time, textEvent);
 }
