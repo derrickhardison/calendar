@@ -59,9 +59,11 @@ function saveClick(e) {
     var time = $(this.previousElementSibling).data("hours");
 
     localStorage.setItem(time, textEvent);
+
+    console.log("test message");
 }
 
-$(document).on("click", ".saveBtn", saveClick);
+$(document).on("click", ".btn", saveClick);
 
 });
 
