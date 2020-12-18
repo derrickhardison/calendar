@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
 
-var arrayOfHours = ["09", "10", "11", "12", "13", "14", "15", "16", "17"];
+var arrayOfHours = ["9AM", "10AM", "11AM", "12PM", "1PM", "2PM", "3PM", "4PM", "5PM"];
 
 for(var i = 0; i < arrayOfHours.length; i++){
 
@@ -43,9 +43,21 @@ for(var i = 0; i < arrayOfHours.length; i++){
     buttonCol.addClass("saveBtn btn col-1 fas fa-save");
     row.append(buttonCol);
 
-    // not able to append 
+    if (arrayOfHours[i] === moment().hours()){
+        textField.addClass("present");
+    } else if (arrayOfHours[i] > moment().hours()){
+        textField.addClass("future");
+    } else {
+        textField.addClass("past");
+    }
     
 }
+
+function saveClick(e) {
+    var textEvent = $(this.previousElementSibling).val();
+}
+
+$(document).on("click", ".saveBtn", saveClick);
 
 });
 
