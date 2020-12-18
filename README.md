@@ -1,6 +1,35 @@
 # calendar
 
 <!-- PSEUDOCODE 
+
+current day is displayed at top of calendar
+    - this will need to be dynamic to know which day of the week it is
+
+time blocks for standard business hours
+
+time blocks are color coded to indicate past, present, or future
+    - needs to be able to detect current time 
+    jquery for color. CSS provided
+
+when a time block is clicked, user can enter an event
+each hour block is an input (looks like text area)
+
+save button for time block saves text in local storage
+
+refresh page and save events persist 
+
+
+similar to fridge game
+array of hours then iterate over it 
+
+creating a row in for loop
+
+-->
+
+<!---
+
+INSTRUCTIONS
+
 # 05 Third-Party APIs: Work Day Scheduler
 
 ## Your Task
