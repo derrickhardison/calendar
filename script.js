@@ -55,6 +55,9 @@ for(var i = 0; i < arrayOfHours.length; i++){
 
 function saveClick(e) {
     var textEvent = $(this.previousElementSibling).val();
+    var time = $(this.previousElementSibling).data("hours")
+
+    localStorage.setItem(time, textEvent);
 }
 
 $(document).on("click", ".saveBtn", saveClick);
